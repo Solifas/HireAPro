@@ -3,3 +3,13 @@ obj/
 /packages/
 riderModule.iml
 /_ReSharper.Caches/
+dep/infrastructure/HireAPro.api.zip
+publish/
+.idea/
+.vscode/
+.terraform/
+.terraform.lock.hcl
+.tfstate
+.tfstate.backup
+.terraform.lock.hcl
+.terraform.lock.hcl.lock
