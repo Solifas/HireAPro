@@ -42,7 +42,7 @@ resource "aws_lambda_function" "aspnet_core_function" {
   function_name = "hireapro-api-function"
   role          = aws_iam_role.lambda_role.arn
   package_type  = "Image"
-  image_uri     = "solifas/hireapro:9" # Local image name
+  image_uri     = "https://hub.docker.com/repository/docker/solifas/hireapro/tags/11/sha256-052353fcfebe8654272cb379eff2b78d808c356eef8626cec298354d0ef1beea" # Local image name
 
   vpc_config {
     subnet_ids         = data.aws_subnets.default.ids
