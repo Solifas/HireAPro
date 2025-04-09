@@ -39,13 +39,10 @@ resource "aws_apigatewayv2_stage" "lambda_stage" {
 
 # Lambda function
 resource "aws_lambda_function" "aspnet_core_function" {
-  filename      = "HireAPro.api.zip" # You'll need to provide the zipped application
   function_name = "hireapro-api-function"
   role          = aws_iam_role.lambda_role.arn
-  handler       = "HireAPro.api::HireAPro.api.LambdaEntryPoint::FunctionHandlerAsync"
-  runtime       = "dotnet8"
-  memory_size   = 512
-  timeout       = 30
+  package_type  = "Image"
+  image_uri     = "hireapro-api:latest" # Local image name
 
   vpc_config {
     subnet_ids         = data.aws_subnets.default.ids
